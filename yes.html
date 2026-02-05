@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>YAY 💕</title>
+  <title>She Said YES 💖</title>
   <style>
     body {
       height: 100vh;
@@ -11,46 +11,73 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       overflow: hidden;
+      flex-direction: column;
     }
 
     h1 {
-      font-size: 50px;
+      font-size: 48px;
       color: #ff1e56;
+      margin-bottom: 10px;
     }
 
     p {
-      font-size: 24px;
+      font-size: 22px;
+      color: #333;
+      max-width: 600px;
     }
 
-    .hearts {
+    .heart {
       position: absolute;
       font-size: 30px;
-      animation: float 4s infinite;
+      animation: float 4s linear infinite;
     }
 
     @keyframes float {
-      0% { transform: translateY(100vh); opacity: 0; }
-      100% { transform: translateY(-10vh); opacity: 1; }
+      from { transform: translateY(100vh); opacity: 0; }
+      to { transform: translateY(-10vh); opacity: 1; }
+    }
+
+    iframe {
+      margin-top: 20px;
+      border-radius: 12px;
     }
   </style>
 </head>
 <body>
 
-  <div>
-    <h1>YAYYY!!! 💖💖💖</h1>
-    <p>You just made me the happiest person 🥰</p>
-    <p>Happy Valentine’s Day! 🌹</p>
-  </div>
+  <h1>Ritika 💖</h1>
+  <p>
+    Tumhara YES sirf ek jawab nahi tha,<br>
+    balki meri duniya ka sabse khoobsurat pal tha 🥹<br><br>
+
+    Tumhari hasi, tumhari baatein,<br>
+    aur tumhara saath — sab kuch special hai ✨<br><br>
+
+    Aaj Valentine’s Day hai,<br>
+    par mere liye har din tab special hota hai<br>
+    jab tum mere saath hoti ho ❤️
+  </p>
+
+  <!-- YouTube Music (starts from 0:15) -->
+  <iframe
+    width="300"
+    height="170"
+    src="https://www.youtube.com/embed/LsUdoy7EH7M?start=15&autoplay=1"
+    title="Valentine Song"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+  </iframe>
 
   <script>
     setInterval(() => {
       const heart = document.createElement("div");
-      heart.className = "hearts";
+      heart.className = "heart";
       heart.innerHTML = "❤️";
       heart.style.left = Math.random() * 100 + "vw";
-      heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+      heart.style.animationDuration = (Math.random() * 2 + 3) + "s";
       document.body.appendChild(heart);
 
       setTimeout(() => heart.remove(), 5000);
