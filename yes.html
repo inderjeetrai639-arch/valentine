@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YAY 💕</title>
+  <style>
+    body {
+      height: 100vh;
+      background: radial-gradient(circle, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 50px;
+      color: #ff1e56;
+    }
+
+    p {
+      font-size: 24px;
+    }
+
+    .hearts {
+      position: absolute;
+      font-size: 30px;
+      animation: float 4s infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh); opacity: 0; }
+      100% { transform: translateY(-10vh); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <h1>YAYYY!!! 💖💖💖</h1>
+    <p>You just made me the happiest person 🥰</p>
+    <p>Happy Valentine’s Day! 🌹</p>
+  </div>
+
+  <script>
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.className = "hearts";
+      heart.innerHTML = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 5000);
+    }, 300);
+  </script>
+
+</body>
+</html>
